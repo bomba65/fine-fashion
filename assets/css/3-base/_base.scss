@@ -1,1 +1,98 @@
 /* Base Styles -------------------- */
+
+html {
+  font-size: 10px;
+}
+
+body {
+  color: #000;
+  font-size: 1.6rem;
+  font-style: Helvetica;
+  font-weight: bold;
+}
+
+.logo {
+  width: 180px;
+}
+
+.section-main .container {
+  padding-top: 38px;
+  padding-bottom: 38px;
+  position: relative;
+
+  .soon-text {
+    top: -14px;
+    left: 30%;
+    line-height: 0;
+    color: #eeeeee;
+    font-size: 100px;
+    font-weight: bold;
+    position: absolute;
+  }
+  .first-text {
+    top: 0;
+    left: 38%;
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+  }
+
+  @include media-breakpoint-down(md) {
+    .soon-text {
+      top: -8px;
+      font-size: 72px;
+    }
+    .first-text {
+      font-size: 20px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    .soon-text {
+      top: -8px;
+      left: 50%;
+      transform: translateX(-30%);
+      font-size: 56px;
+    }
+    .first-text {
+      left: 0;
+      font-size: 16px;
+      text-align: center;
+      width: 100%;
+    }
+  }
+}
+
+.box {
+  margin: 0 auto;
+  padding: 10px 50px 50px;
+  border: 2px solid #000;
+
+  @include media-breakpoint-up(lg) {
+    margin: 0 70px;
+    padding: 10px 100px 50px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 10px 10px 10px;
+  }
+
+  .top-text {
+    margin: 0 auto 50px;
+    max-width: 350px;
+    text-align: center;
+    @include media-breakpoint-down(sm) {
+      font-size: 1.4rem;
+      margin-bottom: 25px;
+    }
+  }
+
+  .box-features {
+    img {
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+    }
+    p {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
